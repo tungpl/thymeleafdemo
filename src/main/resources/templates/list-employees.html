@@ -2,42 +2,50 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head>
+	<head>
 
-<!-- reference css file -->
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-<title>Employee Directory</title>
 
-</head>
+		<title>Employee Directory</title>
 
-<body>
+	</head>
 
-	<h3>Employee Directory</h3>
+	<body>
+		<div class="container">
+			<h3>Employee Directory</h3>
 
-	<table border="1">
+			<table class="table table-bordered table-striped">
 
-		<thead>
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email</th>
-			</tr>
+				<thead class="thead-dark">
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+				</tr>
 
-		</thead>
+				</thead>
 
-		<tbody>
-			<tr th:each="tempEmployee : ${employees}">
+				<tbody>
+				<tr th:each="tempEmployee : ${employees}">
 
-				<td th:text="${tempEmployee.firstName}" />
-				<td th:text="${tempEmployee.lastName}" />
-				<td th:text="${tempEmployee.email}" />
+					<td th:text="${tempEmployee.firstName}" />
+					<td th:text="${tempEmployee.lastName}" />
+					<td th:text="${tempEmployee.email}" />
 
-			</tr>
+				</tr>
 
-		</tbody>
-	</table>
+				</tbody>
+			</table>
 
-</body>
+		</div>
+
+	</body>
 
 </html>
